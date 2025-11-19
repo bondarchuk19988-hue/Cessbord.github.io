@@ -101,7 +101,7 @@ let konMove = (newX, newY) => {
 }
 
 let bord = () => {
-    document.body.innerHTML = '';
+    document.body.innerHTML = ''
     canGo()
     pawn()
     for (let i = 1; i <= 8; i++) {
@@ -113,7 +113,7 @@ let bord = () => {
             div.style.width = "30px"
             div.setAttribute('date-id', j + '' + i)
 
-            let isMK = SigKon && matKonMove.some(move => move[0] === j && move[1] === i);
+            let isMK = SigKon && matKonMove.some(move => move[0] === j && move[1] === i)
 
             if (y1 == i && x1 == j) {
                 let kon = document.createElement('div')
@@ -141,7 +141,7 @@ let bord = () => {
                 } else {
                     div.style.backgroundColor = 'lightgreen'
                     div.onclick = function () {
-                        konMove(j, i);
+                        konMove(j, i)
                     }
                 }
                 cotndiv.appendChild(div)
@@ -173,7 +173,7 @@ let bord = () => {
         document.body.appendChild(cotndiv)
     }
     if (kolvopawn == 0) {
-        document.body.innerHTML = '';
+        document.body.innerHTML = ''
         document.writeln("Поздровляем вы победили за ", kolvohodov," ходов")
     }
 }
